@@ -1,0 +1,10 @@
+{
+  "identifier": "main",
+  "description": "Only the local main window can call these validated business commands. No filesystem, shell, HTTP or dialog plugin access.",
+  "windows": ["main"],
+  "permissions": [
+    "allow-import-files", "allow-authorize-directory", "allow-list-grants", "allow-revoke-grant",
+    "allow-search-files", "allow-list-tags", "allow-create-tag", "allow-rename-tag",
+    "allow-set-file-tag", "allow-file-details", "allow-relink-file", "allow-delete-index"
+  ]
+}

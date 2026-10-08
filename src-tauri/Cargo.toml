@@ -1,0 +1,28 @@
+[package]
+name = "personal-file-tags"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.95"
+
+[lib]
+name = "personal_file_tags"
+crate-type = ["rlib"]
+
+[build-dependencies]
+tauri-build = { version = "=2.7.1", features = [] }
+
+[dependencies]
+tauri = { version = "=2.12.1", features = [] }
+serde = { version = "=1.0.228", features = ["derive"] }
+rusqlite = { version = "=0.37.0", features = ["bundled"] }
+rfd = "=0.15.4"
+windows-sys = { version = "=0.61.2", features = ["Win32_Foundation", "Win32_Storage_FileSystem"] }
+
+[dev-dependencies]
+tempfile = "=3.23.0"
+sha2 = "=0.10.9"
+
+
+[features]
+default = []
+custom-protocol = ["tauri/custom-protocol"]
